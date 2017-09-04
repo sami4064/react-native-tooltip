@@ -27,14 +27,16 @@ var ViewClass = React.createClass({
       arrowDirection: 'down'
     };
   },
-
+  setMenuItems: function() {
+      ToolTipMenu.setMenuItems(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
+  },
   showMenu: function() {
     ToolTipMenu.show(findNodeHandle(this.refs.toolTipText), this.getOptionTexts(), this.props.arrowDirection);
   },
   hideMenu: function() {
     ToolTipMenu.hide();
   },
-  
+
   getOptionTexts: function() {
     return this.props.actions.map((option) => option.text);
   },

@@ -18,6 +18,7 @@ RCT_EXPORT_METHOD(show:(nonnull NSNumber *)reactTag
                   arrowDirection: (NSString *)arrowDirection)
 {
     UIView *view = [self.bridge.uiManager viewForReactTag:reactTag];
+        view.tintColor = [UIColor colorWithRed:1.00 green:0.0 blue:0.0 alpha:1.0];
     NSArray *buttons = items;
     NSMutableArray *menuItems = [NSMutableArray array];
     for (NSString *buttonText in buttons) {
@@ -48,6 +49,7 @@ RCT_EXPORT_METHOD(setMenuItems:(nonnull NSNumber *)reactTag
                   arrowDirection: (NSString *)arrowDirection)
 {
     UIView *view = [self.bridge.uiManager viewForReactTag:reactTag];
+    view.tintColor = [UIColor colorWithRed:1.00 green:0.0 blue:0.0 alpha:1.0];    
     NSArray *buttons = items;
     NSMutableArray *menuItems = [NSMutableArray array];
     for (NSString *buttonText in buttons) {
